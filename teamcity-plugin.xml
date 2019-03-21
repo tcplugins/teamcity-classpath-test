@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:schemas-jetbrains-com:teamcity-plugin-v1-xml">
+  <info>
+    <name>teamcity-classpath-test</name>
+    <display-name>teamcity-classpath-test</display-name>
+    <version>@Version@</version>
+    <description>Classpath Loader test</description>
+    <download-url>Plugin download URL</download-url>
+    <email>netwolfuk@gmail.com</email>
+    <vendor>
+      <name>@VendorName@</name>
+      <url>@VendorURL@</url>
+      <logo>Plugin vendor logo URL</logo>
+    </vendor>
+  </info>
+  <deployment use-separate-classloader="true" allow-runtime-reload="true"/>
+</teamcity-plugin>
