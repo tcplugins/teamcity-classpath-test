@@ -11,7 +11,7 @@
 
 	<bean id="classPathTestAppServer"
 		class="teamcity.plugin.classpath.ClassPathTestAppServer">
-		<constructor-arg ref="ClassPathTestProvider" />
+		<constructor-arg ref="classPathTestProvider" />
 	</bean>
 
 
