@@ -4,15 +4,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
 	default-autowire="constructor">
 
+	<bean id="thing" 
+		factory-bean="thingFactory"
+		factory-method="createInstance"
+		/>
 
-	<bean id="classPathTestProvider"
-		class="teamcity.plugin.classpath.ClassPathTestProvider"
-		init-method="init" />
-
-	<bean id="classPathTestAppServer"
-		class="teamcity.plugin.classpath.ClassPathTestAppServer">
-		<constructor-arg ref="classPathTestProvider" />
+	<bean id="thingLogger"
+		class="teamcity.plugin.classpath.ThingLogger">
+		<constructor-arg ref="thing" />
 	</bean>
 
+	<bean id="thingFactory"
+		class="teamcity.plugin.classpath.ThingFactory">
+	</bean>
 
 </beans>
